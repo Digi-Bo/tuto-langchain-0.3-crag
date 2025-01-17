@@ -34,6 +34,7 @@ h11==0.14.0
 httpcore==1.0.7
 httptools==0.6.4
 httpx==0.28.1
+httpx-sse==0.4.0
 huggingface-hub==0.27.1
 humanfriendly==10.0
 idna==3.10
@@ -45,13 +46,13 @@ joblib==1.4.2
 jsonpatch==1.33
 jsonpointer==3.0.0
 kubernetes==31.0.0
-langchain==0.2.5
-langchain-community==0.2.5
-langchain-core==0.2.7
-langchain-openai==0.1.8
-langchain-text-splitters==0.2.1
+langchain==0.3.14
+langchain-community==0.3.14
+langchain-core==0.3.30
+langchain-openai==0.3.0
+langchain-text-splitters==0.3.5
 langchainhub==0.1.21
-langsmith==0.1.147
+langsmith==0.2.11
 markdown-it-py==3.0.0
 MarkupSafe==3.0.2
 marshmallow==3.25.1
@@ -87,6 +88,7 @@ protobuf==5.29.3
 pyasn1==0.6.1
 pyasn1_modules==0.4.1
 pydantic==2.10.5
+pydantic-settings==2.7.1
 pydantic_core==2.27.2
 Pygments==2.19.1
 PyPika==0.48.9

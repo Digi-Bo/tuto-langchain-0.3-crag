@@ -26,7 +26,7 @@ from langchain_community.document_loaders import WebBaseLoader  # Chargement des
 from langchain_community.vectorstores import Chroma  # Base vectorielle pour la recherche
 from langchain_core.output_parsers import StrOutputParser  # Parsing des réponses LLM
 from langchain_openai import ChatOpenAI, OpenAIEmbeddings  # Intégration OpenAI pour LLM et embeddings
-from langchain_core.pydantic_v1 import BaseModel, Field  # Gestion des modèles avec Pydantic
+from pydantic import BaseModel, Field  # Gestion des modèles avec Pydantic
 from colorama import Fore  # Stylisation du texte dans le terminal
 
 # Chargement des variables d'environnement
@@ -37,7 +37,13 @@ USER_AGENT = os.getenv("USER_AGENT")  # Récupère la variable USER_AGENT défin
 warnings.filterwarnings("ignore")
 
 # Initialisation du modèle de langage
-llm = ChatOpenAI()
+llm = ChatOpenAI(
+    model_name="gpt-4o",
+    temperature=0,
+    max_tokens=None,
+    timeout=None,
+    max_retries=2,
+)
 
 #### INDEXATION DES DOCUMENTS ####
 # Définition des URLs contenant les articles à indexer
