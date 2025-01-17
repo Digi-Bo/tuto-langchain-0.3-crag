@@ -7,7 +7,7 @@ Il met à jour le projet pour la version 0.3 de langchain et fournit une version
 ---
 
 
-CRAG améliore le pipeline traditionnel de Retrieval-Augmented Generation (RAG) en introduisant un évaluateur de pertinence. Cet outil évalue la relation entre les documents récupérés et la requête afin d'améliorer la précision des réponses générées.
+Le CRAG améliore le pipeline traditionnel de Retrieval-Augmented Generation (RAG) en introduisant un évaluateur de pertinence. Cet outil évalue la relation entre les documents récupérés et la requête afin d'améliorer la précision des réponses générées.
 
 ---
 
@@ -15,8 +15,7 @@ CRAG améliore le pipeline traditionnel de Retrieval-Augmented Generation (RAG) 
 
 - **OpenAI** : [OpenAI](https://python.langchain.com/docs/integrations/platforms/openai) fournit une interface Python pour interagir avec l'API OpenAI et générer des réponses basées sur les modèles GPT.
 - **python-dotenv** : [python-dotenv](https://pypi.org/project/python-dotenv/) permet de charger des variables d'environnement depuis un fichier `.env` pour sécuriser les clés API.
-- **colorama** : [colorama](https://pypi.org/project/colorama/) ajoute des couleurs au texte affiché dans le terminal pour une meilleure lisibilité.
-- **ChromaDB** : [ChromaDB](https://python.langchain.com/v0.2/docs/integrations/vectorstores/chroma/) est une base de données vectorielle open-source optimisée pour les développeurs.
+- **ChromaDB** : [ChromaDB](https://python.langchain.com/v0.2/docs/integrations/vectorstores/chroma/) est une base de données vectorielle open-source pour stocker l'embedding en local.
 - **Tavily Search API** : [Tavily](https://app.tavily.com/documentation/apis) est un moteur de recherche conçu pour les modèles de langage (LLM), fournissant des résultats précis et en temps réel.
 
 ---
