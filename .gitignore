@@ -2,6 +2,11 @@
 env/
 env/*
 
+# Ignorer ce fichier de la doc
+00-doc/01-mise-a-jour-app.md
+
+
+
 # Ignorer les fichiers générés par Python
 __pycache__/
 *.py[cod]
