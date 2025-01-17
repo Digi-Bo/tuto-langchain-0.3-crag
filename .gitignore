@@ -2,9 +2,8 @@
 env/
 env/*
 
-# Ignorer ce fichier de la doc
-00-doc/01-mise-a-jour-app.md
-
+# Ignorer ce dossier de la doc
+00-Remarques/
 
 
 # Ignorer les fichiers générés par Python

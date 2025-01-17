@@ -1,10 +1,11 @@
-Voici un README mis à jour en français pour un utilisateur macOS :
-
+Ce projet est adapté d'un exemple de cette formation : [Udemy : Master RAG](https://www.udemy.com/course/llm-retrieval-augmented-generation-masterclass/)
+Il met à jour le projet pour la version 0.3 de langchain et fournit une version francophone détaillée adaptée aux débutants.
 ---
 
 # Projet : CRAG - Corrective RAG
 
 ---
+
 
 CRAG améliore le pipeline traditionnel de Retrieval-Augmented Generation (RAG) en introduisant un évaluateur de pertinence. Cet outil évalue la relation entre les documents récupérés et la requête afin d'améliorer la précision des réponses générées.
 
@@ -81,6 +82,6 @@ CRAG améliore le pipeline traditionnel de Retrieval-Augmented Generation (RAG) 
 
 ## Ressources supplémentaires
 
-- [Documentation LangChain](https://js.langchain.com/v0.1/docs/)
+- [Documentation LangChain](https://js.langchain.com/docs/introduction/)
 - [Documentation OpenAI](https://platform.openai.com/docs/)
 - [Documentation ChromaDB](https://python.langchain.com/v0.2/docs/integrations/vectorstores/chroma/)
