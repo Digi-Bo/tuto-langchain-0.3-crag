@@ -1,0 +1,3 @@
+OPENAI_API_KEY="ta clé openAI"
+TAVILY_API_KEY="ta clé tavily"
+USER_AGENT=myagent
