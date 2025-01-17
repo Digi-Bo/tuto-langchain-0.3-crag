@@ -16,7 +16,7 @@ USER_AGENT = os.getenv("USER_AGENT")
 
 # Importation des bibliothèques nécessaires
 import warnings  # Pour ignorer les avertissements inutiles
-from langchain import hub  # Fournit des modèles et des prompts pour LangChain
+from langsmith import Client  #pour importer des modèlesz de prompts
 from langchain_community.tools.tavily_search import TavilySearchResults  # Outil de recherche web
 from langchain.text_splitter import RecursiveCharacterTextSplitter  # Découpage de texte
 from langchain.schema import Document  # Structure pour représenter les documents
@@ -105,14 +105,16 @@ web_search_tool = TavilySearchResults(k=3)  # Limite à 3 résultats de recherch
 
 #### PIPELINE DE GÉNÉRATION DE RÉPONSES ####
 # Chargement d'un prompt spécifique pour le RAG
-prompt = hub.pull("rlm/rag-prompt")
+client = Client()
+prompt = client.pull_prompt("rlm/rag-prompt")
 
 def assess_retrieved_docs(query):
     """
     Évalue la pertinence des documents récupérés pour une question donnée.
     """
     retrieval_grader = grader_prompt | structured_llm_grader | GradeDocuments.get_score
-    docs = retriever.get_relevant_documents(query)  # Recherche des documents pertinents
+    docs = retriever.invoke(query) # Recherche des documents pertinents
+
     doc_txt = docs[0].page_content  # Récupère le contenu du premier document
     binary_score = retrieval_grader.invoke({"question": query, "documents": doc_txt})
     return binary_score, docs
