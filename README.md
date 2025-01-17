@@ -1,76 +1,86 @@
-# Project : CRAG - Corrective RAG
+Voici un README mis à jour en français pour un utilisateur macOS :
 
 ---
-CRAG enhances the traditional RA pipeline by introducing a retrieval evaluator to assess the relationship between the retrieved documents and the query. 
 
+# Projet : CRAG - Corrective RAG
 
-- **OpenAI** : [OpenAI](https://python.langchain.com/docs/integrations/platforms/openai) is a Python library that provides a simple interface to the OpenAI API. It also provides a command-line interface (CLI) for interacting with the API.
+---
 
-- **python-dotenv** : [python-dotenv](https://pypi.org/project/python-dotenv/) is a Python library that loads environment variables from a .env file. It is used to load the OpenAI API key from the .env file.
+CRAG améliore le pipeline traditionnel de Retrieval-Augmented Generation (RAG) en introduisant un évaluateur de pertinence. Cet outil évalue la relation entre les documents récupérés et la requête afin d'améliorer la précision des réponses générées.
 
-- **colorama** : [python-dotenv](https://pypi.org/project/colorama/) is a Python library to produce colored terminal text and outputs
+---
 
-- **ChromaDB** : [chromaDB](https://python.langchain.com/v0.2/docs/integrations/vectorstores/chroma/) : Chroma is a AI-native open-source vector database focused on developer productivity
+## Fonctionnalités principales :
 
+- **OpenAI** : [OpenAI](https://python.langchain.com/docs/integrations/platforms/openai) fournit une interface Python pour interagir avec l'API OpenAI et générer des réponses basées sur les modèles GPT.
+- **python-dotenv** : [python-dotenv](https://pypi.org/project/python-dotenv/) permet de charger des variables d'environnement depuis un fichier `.env` pour sécuriser les clés API.
+- **colorama** : [colorama](https://pypi.org/project/colorama/) ajoute des couleurs au texte affiché dans le terminal pour une meilleure lisibilité.
+- **ChromaDB** : [ChromaDB](https://python.langchain.com/v0.2/docs/integrations/vectorstores/chroma/) est une base de données vectorielle open-source optimisée pour les développeurs.
+- **Tavily Search API** : [Tavily](https://app.tavily.com/documentation/apis) est un moteur de recherche conçu pour les modèles de langage (LLM), fournissant des résultats précis et en temps réel.
 
-## **Install Python** 
+---
 
-- A [Quick Guide for Installing](https://github.com/PackeTsar/Install-Python/blob/master/README.md#install-python-) Python on Common Operating Systems
-- Download the latest version of [Python 3.12](https://www.python.org/downloads/)
+## Prérequis
 
-## Create a virtual environment :
+1. **Python**  
+   Assurez-vous d'avoir Python 3.12 ou une version ultérieure installée.  
+   - Téléchargez Python depuis [python.org](https://www.python.org/downloads/).
 
-(Windows)
-```
-python -m venv env
-```
+2. **Créer un environnement virtuel**  
+   Exécutez la commande suivante dans votre terminal pour créer un environnement virtuel :
+   ```bash
+   python3 -m venv env
+   ```
 
-(MacOS)
-```
-python3 -m venv env
-```
+3. **Activer l'environnement virtuel**  
+   Activez l'environnement virtuel avec la commande suivante :
+   ```bash
+   source env/bin/activate
+   ```
 
-## Activate the virtual environment :
+---
 
-```
-source env/bin/activate
-```
+## Installation des dépendances
 
-## Installation:
-(Windows)
-```
-pip install -r requirements.txt
-pip install langchain_community tiktoken langchain-openai langchainhub chromadb langchain langgraph tavily-python
-```
+1. Installez les bibliothèques nécessaires :  
+   ```bash
+   pip install -r requirements.txt
+   pip install langchain chromadb sentence-transformers
+   ```
 
-(MacOS)
+---
 
-```
-pip3 install -r requirements.txt
-pip install langchain chromadb sentence-transformers
-```
+## Configuration
 
-## [OpenAI - Get an API key](https://platform.openai.com/account/api-keys)
+1. **Obtenir une clé API OpenAI**  
+   Créez un compte ou connectez-vous sur [OpenAI](https://platform.openai.com/account/api-keys) pour récupérer votre clé API.  
+   Exemple de contenu pour le fichier `.env` :  
+   ```
+   OPENAI_API_KEY=sk-XXXXXX...XXXXXX
+   ```
 
-.env file
+   Ajoutez également cette clé à votre environnement système si nécessaire :
+   ```bash
+   export OPENAI_API_KEY='sk-XXXXXX...XXXXXX'
+   ```
 
-OPENAI_API_KEY=sk-brHeh...A39v5iXsM2
+2. **Configurer l'API Tavily**  
+   Consultez la documentation officielle pour activer et configurer l'API Tavily :  
+   [Tavily API Documentation](https://app.tavily.com/documentation/apis).
 
-`export OPENAI_API_KEY='sk-brHeh...A39v5iXsM2'`
+---
 
-## [Tavily Search API](https://app.tavily.com/documentation/apis)
-Tavily's Search API is a search engine built specifically for AI agents (LLMs), delivering real-time, accurate, and factual results at speed.
+## Lancer le script
 
-- [LangChain documentation](https://js.langchain.com/v0.1/docs/integrations/retrievers/tavily/)
+1. Une fois tout configuré, exécutez le programme en activant votre environnement virtuel :  
+   ```bash
+   python3 main.py
+   ```
 
-## Run the script:
+---
 
-(Windows)
-```
-python main.py
-```
+## Ressources supplémentaires
 
-(MacOS)
-```
-python3 main.py
-```
+- [Documentation LangChain](https://js.langchain.com/v0.1/docs/)
+- [Documentation OpenAI](https://platform.openai.com/docs/)
+- [Documentation ChromaDB](https://python.langchain.com/v0.2/docs/integrations/vectorstores/chroma/)
